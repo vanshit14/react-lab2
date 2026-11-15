@@ -43,7 +43,7 @@ export function AddCourseForm({ onAdd }) {
   }
 
   return (
-    <form onSubmit={submit} noValidate>
+    <form className="add-course" onSubmit={submit} noValidate>
       <h2>Add a course</h2>
       {FIELDS.map(({ name, label, type }) => {
         const fieldError = error?.fieldErrors?.[name];
@@ -57,16 +57,16 @@ export function AddCourseForm({ onAdd }) {
           "aria-describedby": fieldError ? `${id}-error` : undefined,
         };
         return (
-          <div key={name}>
+          <div className="field" key={name}>
             <label htmlFor={id}>{label}</label>
             {name === "description"
               ? <textarea {...inputProps} />
               : <input {...inputProps} type={type} />}
-            {fieldError && <p id={`${id}-error`}>{fieldError}</p>}
+            {fieldError && <p className="field-error" id={`${id}-error`}>{fieldError}</p>}
           </div>
         );
       })}
-      {error && <p role="alert">{error.message}</p>}
+      {error && <p className="form-error" role="alert">{error.message}</p>}
       <button type="submit" disabled={submitting}>Add course</button>
     </form>
   );

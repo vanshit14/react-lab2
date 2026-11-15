@@ -4,15 +4,15 @@ export function CoursesView({ courses, status, error }) {
   if (courses.length === 0) return <p>No courses yet.</p>;
 
   return (
-    <ul>
+    <ul className="courses">
       {courses.map((course) => (
         <li key={course.id}>
           <strong>{course.code} · {course.title}</strong>
-          <p>
+          <span>
             {course.credits} credits · {course.department} · {course.seatsLeft === 0
               ? "Full"
               : `${course.seatsLeft} ${course.seatsLeft === 1 ? "seat" : "seats"} left`}
-          </p>
+          </span>
         </li>
       ))}
     </ul>

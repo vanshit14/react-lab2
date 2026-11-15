@@ -1,0 +1,38 @@
+{
+  "method": "Supplied page tests against temporary sample variants",
+  "browser_checked": false,
+  "steps": [
+    {
+      "step": "Original supplied sample",
+      "passed": 4,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "step": "Removed useMemo",
+      "passed": 4,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "step": "Removed fetch useCallback",
+      "passed": 4,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "step": "Removed submit useCallback",
+      "passed": 4,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "step": "Removed useRef and unused imports",
+      "passed": 4,
+      "failed": 0,
+      "exit_code": 0
+    }
+  ],
+  "production_restored": true,
+  "production_sha256": "f135c2ab05e1fc452dea2cfb0322c98a5e6aa6a642c50721f8bcb1c3da9f6a06"
+}

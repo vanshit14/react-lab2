@@ -17,7 +17,7 @@ export function SearchResults({ results, status }) {
   if (results.length === 0) return <p>No courses match.</p>;
 
   return (
-    <ul>
+    <ul className="results">
       {results.map((course) => (
         <li key={course.id}>{course.code} · {course.title}</li>
       ))}
